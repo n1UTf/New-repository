@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>Moving div</title>
+<style>
+
+#d{
+background-color:#000000;
+height:100px;
+width:100px;
+position:relative;
+}
+
+</style>
+</head>
+
+<body>
+<div id="d"></div>
+<script>
+
+let x = 0;
+let y = 0;
+div = document.getElementById("d");
+
+function move(e){
+switch(e.key){
+case "d":
+	x =x+ 5;
+	break;
+case "a":
+	x =x- 5;
+	break;
+case "s":
+	y =y+ 5;
+	break;
+case "w":
+	y =y- 5;
+	break;
+}
+div.style.left = x+"px";
+div.style.top = y+"px";
+}
+
+document.addEventListener("keydown", move);
+
+</script>
+</body>
+
+</html>
